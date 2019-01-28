@@ -1,0 +1,2 @@
+4/4/2012:
+Changed ITWFeed to add record to 001EpisodeSup table if it doesn't exist even if there is no data added.
