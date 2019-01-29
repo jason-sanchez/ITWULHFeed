@@ -201,7 +201,12 @@ Module Module1
             objCommand.Connection = myConnection
 
             For Each dir In dirs
+
                 orphanFound = False '1/7/2019 - set to false so there is a string of orphans followed by an a31 they are not sent to orphans
+                functionError = False '1/29/2019 - Set false so other messages are not tagged this way.  Same as orphans.
+                dbError = False '1/29/2019 - Set false so other messages are not tagged this way.  Same as orphans.
+                globalError = False '1/29/2019 - Set false so other messages are not tagged this way.  Same as orphans.
+
                 thefile = New FileInfo(dir)
                 If thefile.Extension <> ".$#$" Then
                     '1.set up the streamreader to get a file
